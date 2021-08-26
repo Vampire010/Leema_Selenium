@@ -15,8 +15,13 @@ public class Loacters_ex
         
         
         
+        //link text
+       // driver.findElement(By.linkText("Register")).click();
         
-        driver.findElement(By.xpath("//*[@id=\"loginPanel\"]/p[2]/a")).click();
+        
+        //partial link text
+        driver.findElement(By.partialLinkText("Regis")).click();
+
 
         //By ID
         driver.findElement(By.id("customer.firstName")).sendKeys("Jacob");
@@ -30,6 +35,20 @@ public class Loacters_ex
 
 
         
+        //cssSelector
+        driver.findElement(By.cssSelector("#customer\\.phoneNumber")).sendKeys("5623189211");
+        driver.findElement(By.cssSelector("#customer\\.ssn")).sendKeys("5435188");
+        
+        
+        //By xpath
+        driver.findElement(By.xpath("//*[@id=\"customer.username\"]")).sendKeys("jony");
+        driver.findElement(By.xpath("//*[@id=\"customer.password\"]")).sendKeys("jonry1234");        
+        driver.findElement(By.xpath("//*[@id=\"repeatedPassword\"]")).sendKeys("jonry1234");
+        
+        
+        //cssSelector
+        driver.findElement(By.cssSelector("#customerForm > table > tbody > tr:nth-child(13) > td:nth-child(2) > input")).click();
+
         
 	}
 
